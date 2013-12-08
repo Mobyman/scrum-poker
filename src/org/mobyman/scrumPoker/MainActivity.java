@@ -30,16 +30,23 @@ public class MainActivity extends ListActivity {
 
 
     private void initDefaultMarks() {
-        markArrayList.add(new ScrumMark(Float.valueOf("0.1")));
-        markArrayList.add(new ScrumMark(Float.valueOf("0.2")));
-        markArrayList.add(new ScrumMark(Float.valueOf("0.25")));
-        markArrayList.add(new ScrumMark(Float.valueOf("0.3")));
-        markArrayList.add(new ScrumMark(Float.valueOf("0.4")));
-        markArrayList.add(new ScrumMark(Float.valueOf("0.5")));
-        markArrayList.add(new ScrumMark(Float.valueOf("0.75")));
-        markArrayList.add(new ScrumMark(Float.valueOf("1.0")));
-        markArrayList.add(new ScrumMark(Float.valueOf("1.5")));
-        markArrayList.add(new ScrumMark(Float.valueOf("2.0")));
+
+        float[] defaultMarks = new float[] {
+                0.1f,
+                0.2f,
+                0.25f,
+                0.3f,
+                0.4f,
+                0.5f,
+                0.75f,
+                1.0f,
+                1.5f,
+                2.0f
+        };
+
+        for(int i = 0; i < defaultMarks.length; i++) {
+            markArrayList.add(new ScrumMark(defaultMarks[i]));
+        }
     }
 
     @Override
