@@ -88,7 +88,6 @@ public class MainActivity extends ListActivity {
         this.setListAdapter(adapter);
     }
 
-
     private void play(Context context, String file) {
         try {
 
