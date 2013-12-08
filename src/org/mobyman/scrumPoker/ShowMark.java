@@ -7,6 +7,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
+
 public class ShowMark extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +20,7 @@ public class ShowMark extends Activity {
 
         Float mark = intent.getFloatExtra("mark", 0);
         TextView markText = (TextView) findViewById(R.id.fullMarkText);
-
+        mark = BigDecimal.valueOf(mark).setScale(3, BigDecimal.ROUND_HALF_DOWN).floatValue();
         markText.setText(mark.toString());
     }
 }
